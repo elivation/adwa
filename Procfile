@@ -1,1 +1,1 @@
-web: gunicorn agrodata.wsgi --log-file -
+web: waitress-serve --port=$PORT agrodata.wsgi:application
