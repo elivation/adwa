@@ -1,0 +1,108 @@
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+   
+    <title>Agro Data West Africa</title>
+
+    
+
+    
+
+    <!-- Bootstrap core CSS -->
+<link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="{% static 'css/main.css' %}" rel="stylesheet">
+    <link href="{% static 'css/feature.css' %}" rel="stylesheet">
+    
+  </head>
+  <body>
+    
+<header >
+  <nav class="navbar navbar-expand-md navbar-light fixed-top bg-white">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="{% url 'index' %}"><img src = "{% static 'img/logo.jpg'%}"/> </a>
+      <button class="navbar-toggler ml-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon "></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav  ms-auto "> 
+          <li class="nav-item" >
+            <a class="nav-link  text-secondary" aria-current="page" href="#">Why AGRO DATA?</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-secondary" href="{% url 'main' %}">Analytics And Indeces</a>
+          </li>
+          <li class="nav-item" >
+            <a class="nav-link text-secondary" aria-current="page" href="#">Insight</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-secondary" href="#">Industries</a>
+          </li>
+          
+          <li class="nav-item" >
+            <a class="nav-link text-secondary" aria-current="page" href="#">Sign Up</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active text-secondary" href="#">Log In</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
+  </nav>
+</header>
+
+{% block content %}
+
+{% endblock %}
+
+
+
+  <!-- FOOTER -->
+  <footer class="footer mt-auto py-3 bg-light">
+    <div class="container">
+      <p class="float-end"><a href="#">Back to top</a></p>
+      <p>&copy; 2021 AGRO DATA WEST AFRICA. <a href="#"></a> &middot; <a href="#"></a></p>
+    </div>
+  </footer>
+
+
+     
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+    <script src="{% static 'js/chart.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" 
+      integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" 
+      crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" 
+      integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script>
+      <script src="{% static 'js/home1.js' %}"></script>
+      <script src="{% static 'js/home2.js' %}"></script>
+      <script src="{% static 'js/home3.js' %}"></script>
+      
+
+    
+
+      
+  </body>
+</html>

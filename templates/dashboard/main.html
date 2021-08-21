@@ -1,0 +1,406 @@
+{% extends 'dashboard/base.html'%}
+{% load static %}
+
+{% block content %}
+
+
+<nav class="navbar navbar-expand navbar-dark bg-light " aria-label="Second navbar example">
+  <div class="container-fluid">
+    <h3>CROP NAME</h3>
+    <div class="collapse navbar-collapse" id="navbarsExample02">
+      <ul class="navbar-nav me-auto"></ul> 
+    </div>
+  </div>
+</nav>
+
+
+
+<div>
+  <div class="bd-example">
+    <img src="{% static 'img/slide4.jpg'%}" width="100%" height="25%" 
+   role="img" preserveAspectRatio="xMidYMid slice" focusable="false" rect width="100%" height="100%" fill="#868e96"/>
+
+  </div>
+
+
+
+<div>
+  <div class="table-responsive text-nowrap">
+    <table class="table table-striped ">
+      <thead>
+      <tr>
+        <th class="th-lg">
+        <th class="th-lg">Year</th>
+        <th class="th-lg">Total Area <br> Under <br>Cultivation</th>
+        <th class="th-lg">Production <br> Volume</th>
+        <th class="th-lg">Production <br> Cycle</th>
+        <th class="th-lg">Volume <br>Exported</th>
+        <th class="th-lg">Volume <br> Imported</th>
+        <th class="th-lg">Volume <br> To Industry</th>
+        <th class="th-lg">Trade<br> Value (GHc)</th>
+        
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <th scope="row">
+        <td>2015</td>
+        <td>2000</td>
+        <td>700</td>
+        <td>1000</td>
+        <td>1500</td>
+        <td>2450</td>
+        <td>600</td>
+        <td>300</td>
+      </tr>
+      <tr>
+        <th scope="row">
+        <td>2016</td>
+        <td>1300</td>
+        <td>600</td>
+        <td>400</td>
+        <td>1180</td>
+        <td>3300</td>
+        <td>760</td>
+        <td>350</td>
+      </tr>
+      <tr>
+        <th scope="row">
+        <td>2017</td>
+        <td>3200</td>
+        <td>1000</td>
+        <td>800</td>
+        <td>1200</td>
+        <td>4300</td>
+        <td>590</td>
+        <td>300</td>
+      </tr>
+      <tr>
+        <th scope="row">
+        <td>2018</td>
+        <td>800</td>
+        <td>400</td>
+        <td>55</td>
+        <td>2000</td>
+        <td>2060</td>
+        <td>660</td>
+        <td>430</td>
+      </tr>
+      <tr>
+        <th scope="row">
+        <td>2019</td>
+        <td>3000</td>
+        <td>1300</td>
+        <td>200</td>
+        <td>1000</td>
+        <td>3500</td>
+        <td>980</td>
+        <td>150</td>
+      </tr>
+  
+      <tr>
+        <th scope="row">
+        <td>2020</td>
+        <td>4000</td>
+        <td>3000</td>
+        <td>1000</td>
+        <td>2380</td>
+        <td>1000</td>
+        <td>1500</td>
+        <td>220</td>
+      </tr>
+
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+  <div class="example">
+    <nav>
+      <div class="nav nav-tabs mb-3" id="nav-tab" role="tablist">
+        <button class="nav-link active" id="nav-area-tab" data-bs-toggle="tab" data-bs-target="#nav-area" type="button" role="tab" aria-controls="nav-area" aria-selected="true">Total Area Under Cultivation</button>
+        <button class="nav-link" id="nav-production-tab" data-bs-toggle="tab" data-bs-target="#nav-production" type="button" role="tab" aria-controls="nav-production" aria-selected="false">Production Volume</button>
+        <button class="nav-link" id="nav-cycle-tab" data-bs-toggle="tab" data-bs-target="#nav-cycle" type="button" role="tab" aria-controls="nav-cycle" aria-selected="false">Production Cycle</button>
+        <button class="nav-link" id="nav-export-tab" data-bs-toggle="tab" data-bs-target="#nav-export" type="button" role="tab" aria-controls="nav-export" aria-selected="false">Volume Exported</button>
+        <button class="nav-link" id="nav-import-tab" data-bs-toggle="tab" data-bs-target="#nav-import" type="button" role="tab" aria-controls="nav-import" aria-selected="false">Volume Imported</button>
+        <button class="nav-link" id="nav-industry-tab" data-bs-toggle="tab" data-bs-target="#nav-industry" type="button" role="tab" aria-controls="nav-industry" aria-selected="false">Volume To Industry</button>
+        <button class="nav-link" id="nav-trade-tab" data-bs-toggle="tab" data-bs-target="#nav-trade" type="button" role="tab" aria-controls="nav-trade" aria-selected="false">Trade Value</button>
+    
+      </div>
+    </nav>
+
+
+
+    <div class="tab-content" id="nav-tabContent" >
+      <div class="tab-pane fade show active" id="nav-area" role="tabpanel" aria-labelledby="nav-area-tab ">
+        <div class="row ">
+          <div class="w-10 col-md-8">
+            <div class="card shadow">
+              <div class="card-header"><strong>Interactive Data Representation</strong></div>
+                <canvas id="Area" width="70" height="40"></canvas>
+            <div class="card-footer text-muted">Agro Data West Africa</div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card col-md-10 shadow">
+              <div class="card-header">
+                <strong>Source</strong>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Data Source Information</h5>
+                <p class="card-text">This is to prove the accuracy and authenticity of data</p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Source One</li>
+                <li class="list-group-item">Source Two</li>
+                <li class="list-group-item"><strong>DOWNLOAD</strong></li>
+              </ul>
+              <div class="card-body">
+                <a class="btn btn-lg btn-primary" href="#">XLS</a>
+                <a class="btn btn-lg btn-success" href="#">PDF</a>
+                <a class="btn btn-lg btn-warning" href="#">CVS</a>
+              </div>
+              <div class="card-footer text-muted">
+                Agro Data West Africa
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="tab-pane fade show" id="nav-production" role="tabpanel" aria-labelledby="nav-production-tab">
+        <div class="row">
+          <div class="w-10 col-md-8">
+            <div class="card shadow">
+              <div class="card-header"><strong>Interactive Data Representation</strong></div>
+                <canvas id="Production" width="70" height="40"></canvas>
+            <div class="card-footer text-muted">Agro Data West Africa</div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card col-md-10 shadow">
+              <div class="card-header">
+                <strong>Source</strong>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Data Source Information</h5>
+                <p class="card-text">This is to prove the accuracy and authenticity of data</p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Source One</li>
+                <li class="list-group-item">Source Two</li>
+                <li class="list-group-item"><strong>DOWNLOAD</strong></li>
+              </ul>
+              <div class="card-body">
+                <a class="btn btn-lg btn-primary" href="#">XLS</a>
+                <a class="btn btn-lg btn-success" href="#">PDF</a>
+                <a class="btn btn-lg btn-warning" href="#">CVS</a>
+              </div>
+              <div class="card-footer text-muted">
+                Agro Data West Africa
+              </div>
+            </div>
+          </div>  
+        </div>
+      </div>
+
+
+
+      <div class="tab-pane fade" id="nav-cycle" role="tabpanel" aria-labelledby="nav-cycle-tab">
+        <div class="row">
+          <div class="w-10 col-md-8">
+            <div class="card shadow">
+              <div class="card-header"><strong>Interactive Data Representation</strong></div>
+                <canvas id="Cycle" width="70" height="40"></canvas>
+            <div class="card-footer text-muted">Agro Data West Africa</div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card col-md-10 shadow">
+              <div class="card-header">
+                <strong>Source</strong>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Data Source Information</h5>
+                <p class="card-text">This is to prove the accuracy and authenticity of data</p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Source One</li>
+                <li class="list-group-item">Source Two</li>
+                <li class="list-group-item"><strong>DOWNLOAD</strong></li>
+              </ul>
+              <div class="card-body">
+                <a class="btn btn-lg btn-primary" href="#">XLS</a>
+                <a class="btn btn-lg btn-success" href="#">PDF</a>
+                <a class="btn btn-lg btn-warning" href="#">CVS</a>
+              </div>
+              <div class="card-footer text-muted">
+                Agro Data West Africa
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="tab-pane fade" id="nav-export" role="tabpanel" aria-labelledby="nav-export-tab">
+        <div class="row">
+          <div class="w-10 col-md-8">
+            <div class="card shadow">
+              <div class="card-header"><strong>Interactive Data Representation</strong></div>
+                <canvas id="Export" width="70" height="40"></canvas>
+            <div class="card-footer text-muted">Agro Data West Africa</div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card col-md-10 shadow">
+              <div class="card-header">
+                <strong>Source</strong>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Data Source Information</h5>
+                <p class="card-text">This is to prove the accuracy and authenticity of data</p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Source One</li>
+                <li class="list-group-item">Source Two</li>
+                <li class="list-group-item"><strong>DOWNLOAD</strong></li>
+              </ul>
+              <div class="card-body">
+                <a class="btn btn-lg btn-primary" href="#">XLS</a>
+                <a class="btn btn-lg btn-success" href="#">PDF</a>
+                <a class="btn btn-lg btn-warning" href="#">CVS</a>
+              </div>
+              <div class="card-footer text-muted">
+                Agro Data West Africa
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="tab-pane fade" id="nav-import" role="tabpanel" aria-labelledby="nav-import-tab">
+        <div class="row">
+          <div class="w-10 col-md-8">
+            <div class="card shadow">
+              <div class="card-header"><strong>Interactive Data Representation</strong></div>
+                <canvas id="Import" width="70" height="40"></canvas>
+            <div class="card-footer text-muted">Agro Data West Africa</div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card col-md-10 shadow">
+              <div class="card-header">
+                <strong>Source</strong>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Data Source Information</h5>
+                <p class="card-text">This is to prove the accuracy and authenticity of data</p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Source One</li>
+                <li class="list-group-item">Source Two</li>
+                <li class="list-group-item"><strong>DOWNLOAD</strong></li>
+              </ul>
+              <div class="card-body">
+                <a class="btn btn-lg btn-primary" href="#">XLS</a>
+                <a class="btn btn-lg btn-success" href="#">PDF</a>
+                <a class="btn btn-lg btn-warning" href="#">CVS</a>
+              </div>
+              <div class="card-footer text-muted">
+                Agro Data West Africa
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="tab-pane fade" id="nav-industry" role="tabpanel" aria-labelledby="nav-industry-tab">
+        <div class="row">
+          <div class="w-10 col-md-8">
+            <div class="card shadow">
+              <div class="card-header"><strong>Interactive Data Representation</strong></div>
+                <canvas id="Industry" width="70" height="40"></canvas>
+            <div class="card-footer text-muted">Agro Data West Africa</div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card col-md-10 shadow">
+              <div class="card-header">
+                <strong>Source</strong>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Data Source Information</h5>
+                <p class="card-text">This is to prove the accuracy and authenticity of data</p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Source One</li>
+                <li class="list-group-item">Source Two</li>
+                <li class="list-group-item"><strong>DOWNLOAD</strong></li>
+              </ul>
+              <div class="card-body">
+                <a class="btn btn-lg btn-primary" href="#">XLS</a>
+                <a class="btn btn-lg btn-success" href="#">PDF</a>
+                <a class="btn btn-lg btn-warning" href="#">CVS</a>
+              </div>
+              <div class="card-footer text-muted">
+                Agro Data West Africa
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <div class="tab-pane fade" id="nav-trade" role="tabpanel" aria-labelledby="nav-trade-tab">
+        <div class="row">
+          <div class="w-10 col-md-8">
+            <div class="card shadow">
+              <div class="card-header"><strong>Interactive Data Representation</strong></div>
+                <canvas id="Trade" width="70" height="40"></canvas>
+            <div class="card-footer text-muted">Agro Data West Africa</div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card col-md-10 shadow">
+              <div class="card-header">
+                <strong>Source</strong>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Data Source Information</h5>
+                <p class="card-text">This is to prove the accuracy and authenticity of data</p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Source One</li>
+                <li class="list-group-item">Source Two</li>
+                <li class="list-group-item"><strong>DOWNLOAD</strong></li>
+              </ul>
+              <div class="card-body">
+                <a class="btn btn-lg btn-primary" href="#">XLS</a>
+                <a class="btn btn-lg btn-success" href="#">PDF</a>
+                <a class="btn btn-lg btn-warning" href="#">CVS</a>
+              </div>
+              <div class="card-footer text-muted">
+                Agro Data West Africa
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  
+    </div>
+    
+    <hr class="featurette-divider">
+  </div>
+
+{% endblock%}

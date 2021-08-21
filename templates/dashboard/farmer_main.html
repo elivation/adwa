@@ -1,0 +1,173 @@
+{% extends 'dashboard/base.html'%}
+{% load static %}
+
+{% block content %}
+
+
+<nav class="navbar navbar-expand navbar-dark bg-light " aria-label="Second navbar example">
+  <div class="container-fluid">
+    <h3>FARMER DATA</h3>
+    <div class="collapse navbar-collapse" id="navbarsExample02">
+      <ul class="navbar-nav me-auto"></ul> 
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+
+
+<div>
+  <div class="table-responsive text-nowrap">
+    <table class="table table-striped ">
+      <thead>
+      <tr>
+        <th class="th-lg">
+        <th class="th-lg">Number</th>
+        <th class="th-lg">District</th>
+        <th class="th-lg">Community</th>
+        <th class="th-lg">Group Name</th>
+        <th class="th-lg">Male</th>
+        <th class="th-lg">Female</th>
+        <th class="th-lg">Contact <br> Persons</th>
+        <th class="th-lg">Group <br> Contact</th>
+        
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <th scope="row">
+        <td>1</td>
+        <td>East Gonja</td>
+        <td>Daashie</td>
+        <td>Walima Soziya Shea Pickers</td>
+        <td>22</td>
+        <td>2</td>
+        <td>Azara Tahidu</td>
+        <td>0248778673</td>
+      </tr>
+      <tr>
+        <th scope="row">
+        <td>2</td>
+        <td>East Gonja</td>
+        <td>Nachimbia </td>
+        <td>Suglo Maliyori Shea Pickers</td>
+        <td>16</td>
+        <td>4</td>
+        <td>Suhiyini Fati</td>
+        <td>0269283728</td>
+      </tr>
+      <tr>
+        <th scope="row">
+        <td>3</td>
+        <td>East Gonja</td>
+        <td>Janyii</td>
+        <td>Bobgu Nyeyaa Shea Pickers</td>
+        <td>13</td>
+        <td>3</td>
+        <td>Ayisha Neindow</td>
+        <td>0244045300</td>
+      </tr>
+      <tr>
+        <th scope="row">
+        <td>4</td>
+        <td>East Gonja</td>
+        <td>Dabogshei</td>
+        <td>Tunteeya Shea Pickers</td>
+        <td>43</td>
+        <td>16</td>
+        <td>Hawa Yakubu</td>
+        <td>055454568</td>
+      </tr>
+      <tr>
+        <th scope="row">
+        <td>5</td>
+        <td>East Gonja</td>
+        <td>Kanjeyili</td>
+        <td>Gubkatimali Shea Pickers</td>
+        <td>30</td>
+        <td>14</td>
+        <td>Fatima Abu</td>
+        <td>0203040501</td>
+      </tr>
+  
+      <tr>
+        <th scope="row">
+        <td>6</td>
+        <td>East Gonja</td>
+        <td>Jantong wulanyili</td>
+        <td>Wulanyili Shea Pickers</td>
+        <td>40</td>
+        <td>4</td>
+        <td>Sulemana Sanatu</td>
+        <td>0242009897</td>
+      </tr>
+
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+  <div class="example">
+    <nav>
+      <div class="nav nav-tabs mb-3" id="nav-tab" role="tablist">
+        <button class="nav-link active" id="nav-area-tab" data-bs-toggle="tab" data-bs-target="#nav-area" type="button" role="tab" aria-controls="nav-area" aria-selected="true">Gender Data</button>
+     
+      </div>
+    </nav>
+
+
+
+    <div class="tab-content" id="nav-tabContent" >
+      <div class="tab-pane fade show active" id="nav-area" role="tabpanel" aria-labelledby="nav-area-tab ">
+        <div class="row ">
+          <div class="w-10 col-md-8">
+            <div class="card shadow">
+              <div class="card-header"><strong>Interactive Data Representation</strong></div>
+                <canvas id="Farmer" width="70" height="40"></canvas>
+            <div class="card-footer text-muted">Agro Data West Africa</div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card col-md-10 shadow">
+              <div class="card-header">
+                <strong>Source</strong>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Data Source Information</h5>
+                <p class="card-text">This is to prove the accuracy and authenticity of data</p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Source One</li>
+                <li class="list-group-item">Source Two</li>
+                <li class="list-group-item"><strong>DOWNLOAD</strong></li>
+              </ul>
+              <div class="card-body">
+                <a class="btn btn-lg btn-primary" href="#">XLS</a>
+                <a class="btn btn-lg btn-success" href="#">PDF</a>
+                <a class="btn btn-lg btn-warning" href="#">CVS</a>
+              </div>
+              <div class="card-footer text-muted">
+                Agro Data West Africa
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+        </div>
+      </div>
+
+  
+    </div>
+    
+    <hr class="featurette-divider">
+  </div>
+
+{% endblock%}
