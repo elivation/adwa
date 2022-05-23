@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-# Create your views here.
+# Create your views 
 def index (request):
     return render (request, 'agro/index.html')
 
